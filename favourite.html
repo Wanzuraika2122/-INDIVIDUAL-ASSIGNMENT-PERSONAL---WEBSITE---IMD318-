@@ -1,0 +1,293 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+  <meta name="viewport"content="width=device-width,initial - scale = 1.0">
+
+   <title>IKA’s Personal Website</title>
+  <style>
+     body { 
+    font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("pixel.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      z-index: 0;
+   }  
+
+   /* ====== HEADER ====== */
+    header {
+      background: linear-gradient(to right, #ff7aa2, #ff99c8);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+     header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    /* ====== NAVIGATION ====== */
+    nav {
+      background-color: #f4a7c1;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 20px;
+      background-color: #db7093;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff99c8;
+      transform: scale(1.1);
+    }
+
+  footer {
+      text-align: center;
+      background-color: #ff99c8;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+      border-top: 3px solid #ffb3d9;
+    }
+
+    a {
+      color: #ff4d94;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    } 
+
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== Section Wrapper ===== */
+    .favourite-section {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      color: #d63384;
+      margin-bottom: 15px;
+    }
+
+    .section-desc {
+      text-align: center;
+      font-size: 1rem;
+      margin-bottom: 45px;
+    }
+
+    /* ===== Grid ===== */
+    .fav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 35px;
+    }
+
+    /* ===== Polaroid Card ===== */
+    .fav-card {
+      background: white;
+      border-radius: 22px;
+      padding: 15px 15px 28px;
+      text-align: center;
+      box-shadow: 0 12px 25px rgba(214, 51, 132, 0.25);
+      opacity: 0;
+      transform: translateY(40px) rotate(-2deg);
+      transition: all 0.6s ease;
+      position: relative;
+    }
+
+    .fav-card:nth-child(even) {
+      transform: translateY(40px) rotate(2deg);
+    }
+
+    .fav-card.show {
+      opacity: 1;
+      transform: translateY(0) rotate(0deg);
+    }
+
+    .fav-card::after {
+      content: "💗";
+      position: absolute;
+      top: -12px;
+      right: -10px;
+      font-size: 1.4rem;
+    }
+
+    .fav-card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 15px;
+    }
+
+    .fav-card h3 {
+      color: #ff5fa2;
+      margin-bottom: 8px;
+    }
+
+    .fav-card p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+	</style>
+	<title>Family</title>
+</head>
+<body>
+<header>
+  <h1><b>My favourite things </b></h1>
+  <p>"Little things that can make me smile" 🌼</p>
+
+</header>
+<nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="aboutme.html">About me</a></li>
+		<li><a href="experience.html">Experience</a></li>
+		<li><a href="education.html">Education</a></li>
+		<li><a href="family.html">Family</a></li>
+		<li><a href="friends.html">Friends</a></li>
+		<li><a href="favourite.html">Favourites</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+	</ul>
+</nav>
+<section>
+	 <!-- ===== Favourite Section Only ===== -->
+  <section class="favourite-section">
+
+    <h2 class="section-title">My Favourite Things 💕</h2>
+    <p class="section-desc">Little things that make me smile</p>
+
+    <div class="fav-grid">
+
+      <div class="fav-card">
+        <img src="image/song4.jpg" alt="Music">
+        <h3>Music 🎧</h3>
+        <p>I enjoy listening to music while studying or relaxing.</p>
+      </div>
+
+      <div class="fav-card">
+        <img src="image/cake3.png" alt="Food">
+        <h3>Food 🍰 </h3>
+        <p>Sweet desserts and comfort food are my favourites.</p>
+      </div>
+
+      <div class="fav-card">
+        <img src="image/drink2.jpg" alt="Food">
+        <h3>Drinks 🧋</h3>
+        <p>Japanese green tea frappe is my favourite drink.</p>
+      </div>
+
+      <div class="fav-card">
+        <img src="image/movie5.jpg" alt="Movies">
+        <h3>Movies 🎬</h3>
+        <p>Romance and feel-good movies only.</p>
+      </div>
+
+      <div class="fav-card">
+        <img src="image/hobby5.jpg" alt="Hobby">
+        <h3>Hobbies 🎨</h3>
+        <p>love hiking, learning some new nature.</p>
+      </div>
+
+      <div class="fav-card">
+        <img src="image/travel7.jpg" alt="Travel">
+        <h3>Travel ✈️</h3>
+        <p>Exploring cute places and taking photos.</p>
+      </div>
+
+      <div class="fav-card">
+        <img src="image/color3.png" alt="Pink">
+        <h3>Pink 💗</h3>
+        <p>Pink aesthetic makes everything cuter.</p>
+      </div>
+
+      <div class="fav-card">
+        <img src="image/animal9.jpg" alt="Animal">
+        <h3>Animals 🐱</h3>
+        <p>Cats and small fluffy animals make me happy.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Scroll Animation Script ===== -->
+  <script>
+    const cards = document.querySelectorAll('.fav-card');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+	
+</section>
+	<footer>
+	   <p>&copy; 2025 This website is for educational purpose only ! Wan Zuraika Binti Wan Mazlan</p>	
+	</footer>
+</body>
+</html>

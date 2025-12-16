@@ -1,0 +1,267 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"content="width=device-width,initial - scale = 1.0">
+
+   <title>IKA’s Personal Website</title>
+	<style>
+		 body { 
+		font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-image: url("pixel.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      z-index: 0;
+	 }	
+
+	 /* ====== HEADER ====== */
+    header {
+      background: linear-gradient(to right, #ff7aa2, #ff99c8);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      animation: fadeInDown 1s ease-in-out;
+    }
+
+     header h1 {
+      margin: 0;
+      font-size: 2.2em;
+      letter-spacing: 1px;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1em;
+    }
+
+    /* ====== NAVIGATION ====== */
+    nav {
+      background-color: #f4a7c1;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      text-decoration: none;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 20px;
+      background-color: #db7093;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      background-color: #ff99c8;
+      transform: scale(1.1);
+    }
+
+	footer {
+      text-align: center;
+      background-color: #ff99c8;
+      color: white;
+      padding: 15px;
+      margin-top: 40px;
+      font-size: 0.9em;
+      border-top: 3px solid #ffb3d9;
+    }
+
+    a {
+      color: #ff4d94;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    } 
+
+
+    /* ====== ANIMATIONS ====== */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ====== RESPONSIVE DESIGN ====== */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      main {
+        margin: 15px;
+        padding: 20px;
+      }
+    }
+
+.family-section {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.family-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+/* Responsive gallery */
+.polaroid-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Polaroid style */
+.polaroid {
+    background: #fff;
+    padding: 12px;
+    width: 200px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.8s ease;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Fade-in animation for each item */
+.polaroid:nth-child(1) { animation-delay: 0.1s; }
+.polaroid:nth-child(2) { animation-delay: 0.2s; }
+.polaroid:nth-child(3) { animation-delay: 0.3s; }
+.polaroid:nth-child(4) { animation-delay: 0.4s; }
+/* Duplicate these or use a loop if your editor supports it */
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.polaroid img {
+    width: 100%;
+    display: block;
+}
+
+/* Hover effect */
+.polaroid:hover {
+    transform: scale(1.05) rotateZ(2deg);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+
+	</style>
+
+	<title>Family</title>
+</head>
+<body>
+<header>
+	<h1><b>My family stage</b></h1>
+	<p>"The love of a family is life’s greatest blessing." 🌼</p>
+
+</header>
+<nav>
+	<ul>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="aboutme.html">About me</a></li>
+		<li><a href="experience.html">Experience</a></li>
+		<li><a href="education.html">Education</a></li>
+		<li><a href="family.html">Family</a></li>
+		<li><a href="friends.html">Friends</a></li>
+		<li><a href="favourite.html">Favourites</a></li>
+		<li><a href="gallery.html">Gallery</a></li>
+	</ul>
+</nav>
+
+<section>
+	<section class="family-section">
+    <h2 class="family-title">My Family</h2>
+
+    <div class="polaroid-gallery">
+        <!-- Add as many items as you want -->
+        <div class="polaroid">
+            <img src="image/fam1.jpeg" alt="">
+            <p>Mom & Dad</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="image/fam2.jpeg" alt="">
+            <p>Family pic</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="image/fam3.jpeg" alt="">
+            <p>Me + Niece  🐰 </p>
+        </div>
+
+        <div class="polaroid">
+            <img src="image/fam10.jpg" alt="">
+            <p>My Aisya Humaira 🧸</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="image/fam5.jpg" alt="">
+            <p>My mother💕</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="image/fam6.jpg" alt="">
+            <p>My banker🌙 </p>
+        </div>
+
+        <div class="polaroid">
+            <img src="image/fam9.jpg" alt="">
+            <p>Mini me 🌸</p>
+        </div>
+
+        <div class="polaroid">
+            <img src="image/fam8.jpg" alt="">
+            <p>Me + my sister </p>
+        </div>
+
+        <div class="polaroid">
+            <img src="image/fam7.jpg" alt="">
+            <p>Me + my mom </p>
+        </div>
+
+    </div>
+</section>
+
+</section>
+
+	<footer>
+	   <p>&copy; 2025 This website is for educational purpose only ! Wan Zuraika Binti Wan Mazlan</p>	
+	</footer>
+</body>
+</html>
